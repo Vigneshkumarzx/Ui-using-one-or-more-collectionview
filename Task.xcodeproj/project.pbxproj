@@ -32,6 +32,7 @@
 		42725008278D5BAA000A50B9 /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42725006278D5BAA000A50B9 /* PopularCollectionViewCell.swift */; };
 		42725009278D5BAA000A50B9 /* PopularCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42725007278D5BAA000A50B9 /* PopularCollectionViewCell.xib */; };
 		4272500B278D5DBD000A50B9 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4272500A278D5DBD000A50B9 /* Dish.swift */; };
+		42AB09EA2790749A00670475 /* OfferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AB09E92790749A00670475 /* OfferModel.swift */; };
 		C41EFD733C23E13A9BE3650C /* Pods_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 710DA607433A62CE199AD879 /* Pods_Task.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		42725006278D5BAA000A50B9 /* PopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewCell.swift; sourceTree = "<group>"; };
 		42725007278D5BAA000A50B9 /* PopularCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCollectionViewCell.xib; sourceTree = "<group>"; };
 		4272500A278D5DBD000A50B9 /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		42AB09E92790749A00670475 /* OfferModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferModel.swift; sourceTree = "<group>"; };
 		710DA607433A62CE199AD879 /* Pods_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5602D1AE97579FCAE80BEBE /* Pods-Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task.release.xcconfig"; path = "Target Support Files/Pods-Task/Pods-Task.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +135,7 @@
 				4219F0F5278D9588001F2930 /* PopularDataModel.swift */,
 				421C782D278DB0A200171FD4 /* NearbyModel.swift */,
 				4200A2F2278EB68600B18D49 /* FoodListModel.swift */,
+				42AB09E92790749A00670475 /* OfferModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				420BD465278C0DA3002538DB /* AppDelegate.swift in Sources */,
 				4272500B278D5DBD000A50B9 /* Dish.swift in Sources */,
 				42724FE3278D3D4B000A50B9 /* UIView + Extension.swift in Sources */,
+				42AB09EA2790749A00670475 /* OfferModel.swift in Sources */,
 				420BD467278C0DA3002538DB /* SceneDelegate.swift in Sources */,
 				4200A2F6278EBA7E00B18D49 /* NearByCollectionViewCell.swift in Sources */,
 				4200A2FB278EE87C00B18D49 /* FoodListTableViewCell.swift in Sources */,

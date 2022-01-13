@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DetailFoodListViewController: UIViewController {
     
+    let baseUrl = "https://dawar.nyc3.digitaloceanspaces.com/"
+    
     var foodlist1 = [FoodList]()
     var restaurant: Restaurant?
+    var imagelist = [Item]()
   
     @IBOutlet weak var fullImageView: UIImageView!
     
@@ -92,6 +96,8 @@ extension DetailFoodListViewController: UITableViewDelegate,UITableViewDataSourc
         let cell = tableView.dequeueReusableCell(withIdentifier: "FoodListTableViewCell", for: indexPath) as! FoodListTableViewCell
         
         cell.setup(foodList: foodlist1.first!.allItems[indexPath.row])
+        fullImageView.kf.setImage(with:(baseUrl + (imagelist.first?.image ?? "")).asUrl)
+         
         cell.selectionStyle = .none
         return cell
     }

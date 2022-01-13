@@ -20,7 +20,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1fJ-u0-obY" customClass="CardView" customModule="Task" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="350" height="200"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lPb-Ew-fbh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lPb-Ew-fbh">
                                 <rect key="frame" x="0.0" y="10" width="350" height="190"/>
                             </imageView>
                         </subviews>

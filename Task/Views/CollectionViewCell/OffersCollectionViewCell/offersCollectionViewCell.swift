@@ -10,15 +10,17 @@ import Kingfisher
 
 class offersCollectionViewCell: UICollectionViewCell {
     
+    let baseUrl = "https://dawar.nyc3.digitaloceanspaces.com/"
+    
     static let identifier = String(describing: offersCollectionViewCell.self)
 
     @IBOutlet weak var imageView: UIImageView!
     
     
-    
-    func setup(offers: Offers) {
+
+    func setup(offers: Datum) {
         
-        imageView.kf.setImage(with: offers.image.asUrl )
+        imageView.kf.setImage(with: (baseUrl + offers.image).asUrl)
         
     }
 }

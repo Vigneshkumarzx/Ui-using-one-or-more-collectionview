@@ -19,21 +19,12 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate, Menu
     @IBOutlet weak var nearbyCollectionView: UICollectionView!
     
     
-      var offers: [Offers] = [
-        .init(id: "id1", image: "https://wallpaperaccess.com/full/1087742.jpg"),
-        .init(id: "id2", image: "https://wallpaperaccess.com/full/1087742.jpg "),
-        .init(id: "id2", image: "https://wallpaperaccess.com/full/1087742.jpg ")
-        
-    ]
+      var offers = [Datum]()
+ 
     
     var populars = [BrandsData]()
     
     
-//        .init(id: "id1", name: "pizza", image: "http://161.35.142.163/eatzilla_v2/api/get_banners", description: "something1"),
-//        .init(id: "id2", name: "pizza", image: "http://161.35.142.163/eatzilla_v2/api/get_popular_brands", description: "Something2"),
-//        .init(id: "id3", name: "pizza", image: "http://161.35.142.163/eatzilla_v2/api/get_popular_brands", description: "Something3"),
-//        .init(id: "id4", name: "pizza", image: "http://161.35.142.163/eatzilla_v2/api/get_popular_brands", description: "Something4")
-
     var nearby = [Restaurant]()
  
     var menu: SideMenuNavigationController?
@@ -49,7 +40,7 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate, Menu
         registerCells()
         getResponce()
         getneqrbyResponse()
-        
+        getofferApi()
         let list = MenuListController(with: SideMenuItem.allCases)
         list.delegate = self
         menu = SideMenuNavigationController(rootViewController: list)
@@ -99,6 +90,45 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate, Menu
         task.resume()
     }
 
+    func getofferApi(){
+        let parameters = ["lat" : "11.0168",  "lng" : "76.9558"]
+        let jsonString = jsonToString(json: parameters)
+
+        let postData = jsonString.data(using: .utf8)
+        
+        let urlString = "http://161.35.142.163/eatzilla_v2/api/get_banners"
+        
+        let url = URL(string: urlString)
+        guard url != nil else {
+            debugPrint("URL is Nil")
+            return
+        }
+        
+        let session = URLSession.shared
+        let datatask = session.dataTask(with: url!) { [self] (data, response, error ) in
+            
+            if error == nil , data != nil {
+                let decoder = JSONDecoder()
+                
+                print(String(data: data!, encoding: .utf8)!)
+                
+                do {
+                    let result = try decoder.decode(Offer.self, from: data!)
+                    self.offers = result.offerData
+                    
+                    DispatchQueue.main.async {
+                        self.offfersCollectionView.reloadData()
+                    }
+                }
+                catch {
+                    print(error.localizedDescription)
+                }
+            }
+            
+            
+        }
+        datatask.resume()
+    }
     
     func getneqrbyResponse() {
 
