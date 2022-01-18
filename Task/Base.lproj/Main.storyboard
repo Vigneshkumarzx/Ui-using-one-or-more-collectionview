@@ -19,8 +19,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KBt-52-Fji">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8a9-Wu-yzT">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1109.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8a9-Wu-yzT">
+                                        <rect key="frame" x="29" y="-210" width="414" height="1109.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9fm-ZR-YsK">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
@@ -222,41 +222,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dj5-bS-W1l">
-                                <rect key="frame" x="0.0" y="44" width="414" height="375"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="375" id="RCK-aQ-56O"/>
-                                </constraints>
-                            </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TIH-ue-k0V">
-                                <rect key="frame" x="0.0" y="427" width="414" height="435"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TIH-ue-k0V">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DTo-bL-pVe"/>
                         <color key="backgroundColor" red="0.97647058819999999" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Dj5-bS-W1l" firstAttribute="trailing" secondItem="DTo-bL-pVe" secondAttribute="trailing" id="2ED-AB-BnF"/>
                             <constraint firstItem="TIH-ue-k0V" firstAttribute="leading" secondItem="DTo-bL-pVe" secondAttribute="leading" id="DVL-fo-dVT"/>
+                            <constraint firstItem="TIH-ue-k0V" firstAttribute="trailing" secondItem="DTo-bL-pVe" secondAttribute="trailing" id="Fls-1x-4J2"/>
                             <constraint firstItem="DTo-bL-pVe" firstAttribute="trailing" secondItem="TIH-ue-k0V" secondAttribute="trailing" id="JRa-m5-NLb"/>
-                            <constraint firstItem="Dj5-bS-W1l" firstAttribute="leading" secondItem="DTo-bL-pVe" secondAttribute="leading" id="Nfz-OE-80D"/>
-                            <constraint firstItem="Dj5-bS-W1l" firstAttribute="top" secondItem="DTo-bL-pVe" secondAttribute="top" id="P4z-t8-EDY"/>
-                            <constraint firstItem="Dj5-bS-W1l" firstAttribute="trailing" secondItem="DTo-bL-pVe" secondAttribute="trailing" id="X2M-mw-mvC"/>
-                            <constraint firstItem="Dj5-bS-W1l" firstAttribute="top" secondItem="DTo-bL-pVe" secondAttribute="top" id="ZwF-fB-jlZ"/>
-                            <constraint firstItem="TIH-ue-k0V" firstAttribute="top" secondItem="Dj5-bS-W1l" secondAttribute="bottom" constant="8" symbolic="YES" id="b1r-ZJ-Wko"/>
+                            <constraint firstItem="TIH-ue-k0V" firstAttribute="leading" secondItem="DTo-bL-pVe" secondAttribute="leading" id="RLt-va-T5h"/>
                             <constraint firstItem="TIH-ue-k0V" firstAttribute="bottom" secondItem="DTo-bL-pVe" secondAttribute="bottom" id="cP9-qG-Sg0"/>
-                            <constraint firstItem="Dj5-bS-W1l" firstAttribute="leading" secondItem="DTo-bL-pVe" secondAttribute="leading" id="nxG-Uf-2rk"/>
+                            <constraint firstItem="TIH-ue-k0V" firstAttribute="bottom" secondItem="DTo-bL-pVe" secondAttribute="bottom" id="jXE-Kd-p8J"/>
+                            <constraint firstItem="TIH-ue-k0V" firstAttribute="top" secondItem="DTo-bL-pVe" secondAttribute="top" id="sMi-Bo-vQy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="H32-0H-R34"/>
                     <connections>
-                        <outlet property="fullImageView" destination="Dj5-bS-W1l" id="yNG-E5-VZk"/>
                         <outlet property="tableView" destination="TIH-ue-k0V" id="hHv-38-NuV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h1o-K2-EAV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1725" y="80"/>
+            <point key="canvasLocation" x="1724.6376811594205" y="79.6875"/>
+        </scene>
+        <!--Sidemenu Home View Controller-->
+        <scene sceneID="cfx-rc-RGL">
+            <objects>
+                <viewController storyboardIdentifier="SidemenuHomeViewController" id="7Sj-oI-red" customClass="SidemenuHomeViewController" customModule="Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="di9-V9-T9i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Qhh-uo-gta"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LKp-ag-4TW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2517" y="76"/>
+        </scene>
+        <!--Your Orders View Controller-->
+        <scene sceneID="shS-PB-koh">
+            <objects>
+                <viewController storyboardIdentifier="YourOrdersViewController" id="AQZ-Q5-S6p" customClass="YourOrdersViewController" customModule="Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="INV-y2-qzx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="7SW-fK-vCE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hb1-Mm-P6H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3227" y="69"/>
+        </scene>
+        <!--View Cart View Controller-->
+        <scene sceneID="f6r-3P-eAm">
+            <objects>
+                <viewController storyboardIdentifier="ViewCartViewController" id="rZF-TY-rF2" customClass="ViewCartViewController" customModule="Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qUU-hS-pWo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="a5O-mD-tDn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lqJ-Hi-1Cc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3904" y="69"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JzJ-GB-9ZT">
